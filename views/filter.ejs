@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filtered Records</title>
+  </head>
+  <body>
+    <h1>Records in Group: <%= group %></h1>
+    <% if (!records) { %>
+    <p>Nothing found.</p>
+    <% } else { %>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Group</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% records.forEach(record => { %>
+        <tr>
+          <td><%= record.name %></td>
+          <td><%= record.group %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <% } %>
+  </body>
+</html>

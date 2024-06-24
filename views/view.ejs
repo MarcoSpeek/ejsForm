@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Records</title>
+  </head>
+  <body>
+    <h1>All Records</h1>
+    <% if (!records) { %>
+    <p>No records available.</p>
+    <% } else { %>
+    <ul>
+      <% records.forEach(record => { %>
+      <li><%= record.name %> - <%= record.group %></li>
+      <% }) %>
+    </ul>
+    <% } %>
+  </body>
+</html>
